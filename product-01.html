@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제품명 예시 01 | 메디클</title>
+  <meta name="description" content="메디클 제품 상세 안내 페이지입니다.">
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans KR", Arial, sans-serif;
+      color: #222;
+      background: #f7f9fc;
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #dfe5ee;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0d3f8f;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: #1f2d3d;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d3f8f 0%, #2b63bf 100%);
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 40px;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px 70px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #dfe5ee;
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .image-box {
+      background: #eef3fb;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #0d3f8f;
+      font-size: 28px;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    .info-table th,
+    .info-table td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid #e5eaf1;
+      vertical-align: top;
+    }
+
+    .info-table th {
+      width: 140px;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .desc-box {
+      margin-top: 24px;
+    }
+
+    .btn-row {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: #0d3f8f;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #0d3f8f;
+      border: 1px solid #b9c9e3;
+    }
+
+    footer {
+      background: #1d2630;
+      color: #c9d1d9;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">MEDICLE</a>
+      <nav>
+        <a href="index.html#company">회사소개</a>
+        <a href="index.html#business">사업영역</a>
+        <a href="index.html#products">제품안내</a>
+        <a href="index.html#contact">고객센터</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>제품명 예시 01</h1>
+      <p>CT 조영제</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid">
+      <div class="card">
+        <div class="image-box">
+          제품 이미지 자리
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>제품 정보</h2>
+        <table class="info-table">
+          <tr>
+            <th>제품명</th>
+            <td>제품명 예시 01</td>
+          </tr>
+          <tr>
+            <th>분류</th>
+            <td>CT 조영제</td>
+          </tr>
+          <tr>
+            <th>규격</th>
+            <td>예: 100mL / vial</td>
+          </tr>
+          <tr>
+            <th>제조사</th>
+            <td>제조사명 입력</td>
+          </tr>
+          <tr>
+            <th>특징</th>
+            <td>제품의 주요 특징을 간단히 요약</td>
+          </tr>
+        </table>
+
+        <div class="btn-row">
+          <a href="mailto:medicle@mcle.co.kr" class="btn btn-primary">문의하기</a>
+          <a href="index.html#products" class="btn btn-secondary">목록으로</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card desc-box">
+      <h2>상세 설명</h2>
+      <p>
+        여기에 제품 상세 설명을 넣으면 된다.  
+        제품 용도, 적용 분야, 특징, 보관 방법, 사용 시 참고사항 같은 걸 정리하면 된다.
+      </p>
+      <p>
+        병원이나 담당자가 봤을 때 필요한 정보를 빠르게 읽을 수 있게
+        문장을 너무 길게 늘이지 말고 핵심 위주로 쓰는 게 좋다.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © MEDICLE. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
