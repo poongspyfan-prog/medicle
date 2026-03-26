@@ -2,30 +2,61 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메디클 | 의료기기·조영제 전문 유통</title>
+
   <style>
     body {
-      font-family: Arial;
       margin: 0;
-      background: #f5f8fb;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #333;
     }
+
     header {
       background: #0b5ed7;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
-    section {
-      padding: 40px;
-    }
-    .box {
+
+    nav {
       background: white;
-      padding: 20px;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0b5ed7;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
       margin-bottom: 20px;
       border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -33,25 +64,44 @@
   <p>의료기기 및 조영제 전문 유통</p>
 </header>
 
-<section>
-  <div class="box">
-    <h2>회사 소개</h2>
-    <p>메디클은 의료기기 및 조영제를 전문으로 공급하는 유통 기업입니다.</p>
-  </div>
+<nav>
+  <a href="#about">회사소개</a>
+  <a href="#products">제품</a>
+  <a href="#contact">문의</a>
+</nav>
 
-  <div class="box">
+<section id="about">
+  <div class="card">
+    <h2>회사 소개</h2>
+    <p>
+      메디클은 의료기기 및 조영제를 전문으로 공급하는 유통 기업입니다.<br>
+      병원 및 의료기관에 안정적인 공급과 최적의 제품을 제공합니다.
+    </p>
+  </div>
+</section>
+
+<section id="products">
+  <div class="card">
     <h2>제품</h2>
     <ul>
-      <li>조영제</li>
+      <li>CT 조영제</li>
+      <li>MRI 조영제</li>
       <li>의료 소모품</li>
     </ul>
   </div>
+</section>
 
-  <div class="box">
+<section id="contact">
+  <div class="card">
     <h2>문의</h2>
     <p>Email: medicle@mcle.co.kr</p>
+    <p>Tel: 02-0000-0000</p>
   </div>
 </section>
+
+<footer>
+  © 메디클 All Rights Reserved.
+</footer>
 
 </body>
 </html>
