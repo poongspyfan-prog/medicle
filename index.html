@@ -6,368 +6,392 @@
   <title>메디클 | 의료기기·조영제 전문 유통</title>
   <meta name="description" content="메디클은 의료기기 및 조영제 전문 유통 기업입니다. 병원 및 의료기관에 안정적인 제품 공급 서비스를 제공합니다.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+ <style>
+  * {
+    box-sizing: border-box;
+  }
 
-    html {
-      scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    body {
-      margin: 0;
-      font-family: "Noto Sans KR", Arial, sans-serif;
-      color: #222;
-      background: #fff;
-      line-height: 1.7;
-    }
+  body {
+    margin: 0;
+    font-family: "Noto Sans KR", Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.7;
+  }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-    .topbar {
-      background: #0d3f8f;
-      color: #fff;
-      font-size: 13px;
-      padding: 8px 20px;
-      text-align: right;
-    }
+  .topbar {
+    background: #0d3f8f;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    text-align: right;
+  }
 
-    header {
-      background: #fff;
-      border-bottom: 1px solid #dfe5ee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  header {
+    background: #fff;
+    border-bottom: 1px solid #dfe5ee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
 
-    .logo img {
-      height: 40px;
-     
-    }
+  .logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
 
-    nav {
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
+  .logo a {
+    display: inline-flex;
+    align-items: center;
+  }
 
-    nav a {
-      font-size: 16px;
-      font-weight: 600;
-      color: #1f2d3d;
-    }
+  .logo img {
+    height: 34px;
+    width: auto;
+    display: block;
+  }
 
-    nav a:hover {
-      color: #0d3f8f;
-    }
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
 
-    .hero {
-      background:
-        linear-gradient(rgba(8, 39, 95, 0.55), rgba(8, 39, 95, 0.55)),
-        url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-      color: #fff;
-    }
+  nav a {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1f2d3d;
+    white-space: nowrap;
+  }
 
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 120px 20px 110px;
-    }
+  nav a:hover {
+    color: #0d3f8f;
+  }
 
-    .hero h1 {
-      margin: 0 0 18px;
-      font-size: 48px;
-      line-height: 1.25;
-      font-weight: 800;
-    }
+  .hero {
+    background:
+      linear-gradient(rgba(8, 39, 95, 0.55), rgba(8, 39, 95, 0.55)),
+      url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    color: #fff;
+  }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 0 28px;
-      font-size: 18px;
-      opacity: 0.95;
-    }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 110px;
+  }
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+  .hero h1 {
+    margin: 0 0 18px;
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: 800;
+  }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 15px;
-    }
+  .hero p {
+    max-width: 700px;
+    margin: 0 0 28px;
+    font-size: 18px;
+    opacity: 0.95;
+  }
 
-    .btn-primary {
-      background: #0d3f8f;
-      color: #fff;
-      border: 1px solid #0d3f8f;
-    }
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
 
-    .btn-primary:hover {
-      background: #0a3270;
-    }
+  .btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+  }
 
-    .btn-secondary {
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.45);
-    }
+  .btn-primary {
+    background: #0d3f8f;
+    color: #fff;
+    border: 1px solid #0d3f8f;
+  }
 
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.2);
-    }
+  .btn-primary:hover {
+    background: #0a3270;
+  }
 
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
-    }
+  .btn-secondary {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.45);
+  }
 
-    .section-head {
-      margin-bottom: 36px;
-      text-align: center;
-    }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.2);
+  }
 
-    .section-head h2 {
-      margin: 0 0 10px;
-      font-size: 34px;
-      color: #0d3f8f;
-    }
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+  }
 
-    .section-head p {
-      margin: 0;
-      color: #666;
-      font-size: 17px;
-    }
+  .section-head {
+    margin-bottom: 36px;
+    text-align: center;
+  }
 
+  .section-head h2 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    color: #0d3f8f;
+  }
+
+  .section-head p {
+    margin: 0;
+    color: #666;
+    font-size: 17px;
+  }
+
+  .intro-grid,
+  .biz-grid,
+  .product-grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+  }
+
+  .biz-grid,
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .panel {
+    background: #fff;
+    border: 1px solid #dfe5ee;
+    padding: 28px;
+  }
+
+  .panel h3 {
+    margin: 0 0 14px;
+    font-size: 24px;
+    color: #111;
+  }
+
+  .panel p {
+    margin: 0;
+    color: #555;
+  }
+
+  .feature-list {
+    margin: 18px 0 0;
+    padding-left: 18px;
+    color: #555;
+  }
+
+  .stat-box {
+    background: #0d3f8f;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stat-box h3 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    color: #fff;
+  }
+
+  .stat-box p {
+    margin: 0;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .biz-card {
+    background: #f8fafc;
+    border: 1px solid #dfe5ee;
+    padding: 24px;
+  }
+
+  .biz-card h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: #0d3f8f;
+  }
+
+  .biz-card p {
+    margin: 0;
+    color: #555;
+  }
+
+  .product-card {
+    background: #f8fafc;
+    border: 1px solid #dfe5ee;
+    padding: 20px;
+    transition: all 0.2s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .product-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    background: #e7eef9;
+    color: #0d3f8f;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 3px;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 220px;
+    background: #ffffff;
+    border: 1px solid #e5eaf1;
+    margin-bottom: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .product-card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #0d3f8f;
+  }
+
+  .product-card p {
+    margin: 0;
+    color: #555;
+  }
+
+  .contact-wrap {
+    background: #0d3f8f;
+    color: #fff;
+    padding: 50px 40px;
+  }
+
+  .contact-wrap h2 {
+    margin: 0 0 12px;
+    font-size: 32px;
+  }
+
+  .contact-wrap p {
+    margin: 0 0 24px;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+
+  .contact-list li {
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+
+  footer {
+    background: #1d2630;
+    color: #c9d1d9;
+    padding: 28px 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
     .intro-grid,
     .biz-grid,
     .product-grid {
-      display: grid;
-      gap: 24px;
+      grid-template-columns: 1fr;
     }
 
-    .intro-grid {
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: stretch;
+    .hero-inner {
+      padding: 90px 20px 80px;
     }
 
-    .biz-grid,
-    .product-grid {
-      grid-template-columns: repeat(3, 1fr);
+    .hero h1 {
+      font-size: 34px;
     }
 
-    .panel {
-      background: #fff;
-      border: 1px solid #dfe5ee;
-      padding: 28px;
-    }
-
-    .panel h3 {
-      margin: 0 0 14px;
-      font-size: 24px;
-      color: #111;
-    }
-
-    .panel p {
-      margin: 0;
-      color: #555;
-    }
-
-    .feature-list {
-      margin: 18px 0 0;
-      padding-left: 18px;
-      color: #555;
-    }
-
-    .stat-box {
-      background: #0d3f8f;
-      color: #fff;
-      padding: 30px;
-      display: flex;
+    .header-inner {
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-start;
     }
 
-    .stat-box h3 {
-      margin: 0 0 12px;
-      font-size: 26px;
-      color: #fff;
-    }
-
-    .stat-box p {
-      margin: 0;
-      color: rgba(255,255,255,0.92);
-    }
-
-    .biz-card {
-      background: #f8fafc;
-      border: 1px solid #dfe5ee;
-      padding: 24px;
-    }
-
-    .biz-card h3 {
-      margin: 0 0 12px;
-      font-size: 22px;
-      color: #0d3f8f;
-    }
-
-    .biz-card p {
-      margin: 0;
-      color: #555;
-    }
-
-    .product-card {
-      background: #f8fafc;
-      border: 1px solid #dfe5ee;
-      padding: 20px;
-      transition: all 0.2s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .product-tag {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 5px 10px;
-      background: #e7eef9;
-      color: #0d3f8f;
-      font-size: 13px;
-      font-weight: 700;
-      border-radius: 3px;
-    }
-
-    .product-image {
+    nav {
       width: 100%;
-      height: 220px;
-      background: #ffffff;
-      border: 1px solid #e5eaf1;
-      margin-bottom: 16px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      gap: 18px;
     }
 
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .logo img {
+      height: 30px;
     }
-
-    .product-card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      color: #0d3f8f;
-    }
-
-    .product-card p {
-      margin: 0;
-      color: #555;
-    }
-
-    .contact-wrap {
-      background: #0d3f8f;
-      color: #fff;
-      padding: 50px 40px;
-    }
-
-    .contact-wrap h2 {
-      margin: 0 0 12px;
-      font-size: 32px;
-    }
-
-    .contact-wrap p {
-      margin: 0 0 24px;
-      color: rgba(255,255,255,0.92);
-    }
-
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 24px;
-    }
-
-    .contact-list li {
-      margin-bottom: 10px;
-      font-size: 17px;
-    }
-
-    footer {
-      background: #1d2630;
-      color: #c9d1d9;
-      padding: 28px 20px;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    @media (max-width: 900px) {
-      .intro-grid,
-      .biz-grid,
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-inner {
-        padding: 90px 20px 80px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
   <div class="topbar">의료기기 및 조영제 전문 유통 기업</div>
 
-  <header>
-<div class="logo">
-  <a href="index.html">
-    <img src="logo.png" alt="메디클 로고">
-  </a>
-      <nav>
-        <a href="#company">회사소개</a>
-        <a href="#business">사업영역</a>
-        <a href="#products">제품안내</a>
-        <a href="#contact">고객센터</a>
-      </nav>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="메디클 로고">
+      </a>
     </div>
-  </header>
+
+    <nav>
+      <a href="#company">회사소개</a>
+      <a href="#business">사업영역</a>
+      <a href="#products">제품안내</a>
+      <a href="#contact">고객센터</a>
+    </nav>
+  </div>
+</header>
 
   <section class="hero">
     <div class="hero-inner">
