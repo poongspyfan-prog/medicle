@@ -4,104 +4,438 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메디클 | 의료기기·조영제 전문 유통</title>
+  <meta name="description" content="메디클은 의료기기 및 조영제 전문 유통 기업입니다. 병원 및 의료기관에 안정적인 공급과 다양한 제품 정보를 제공합니다.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f7fb;
-      color: #333;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     header {
-      background: #0b5ed7;
+      background: linear-gradient(135deg, #0b5ed7 0%, #2a7de1 100%);
       color: white;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .topbar {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
     nav {
-      background: white;
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      margin: 0 15px;
-      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eaf2ff 0%, #f7fbff 100%);
+      padding: 90px 24px 70px;
+      border-bottom: 1px solid #dbe6f5;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: 44px;
+      line-height: 1.2;
+      color: #0f172a;
+    }
+
+    .hero p {
+      margin: 0 0 28px;
+      font-size: 18px;
+      color: #475569;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #0b5ed7;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #094eb3;
+    }
+
+    .btn-secondary {
+      background: white;
       color: #0b5ed7;
-      font-weight: bold;
+      border: 1px solid #c7d9f7;
+    }
+
+    .btn-secondary:hover {
+      background: #f4f8ff;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(11, 94, 215, 0.08);
+      border: 1px solid #e5eefb;
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 22px;
+      color: #0f172a;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #475569;
     }
 
     section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 24px;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: 34px;
+      color: #0f172a;
+      text-align: center;
+    }
+
+    .section-desc {
+      margin: 0 auto 36px;
+      max-width: 760px;
+      text-align: center;
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    .about-grid,
+    .product-grid,
+    .strength-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .about-grid,
+    .strength-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .card {
       background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+      border: 1px solid #e8eef7;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #0f172a;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #475569;
+    }
+
+    .product-card .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eaf2ff;
+      color: #0b5ed7;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #0b5ed7 0%, #2a7de1 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 34px;
+      box-shadow: 0 10px 30px rgba(11, 94, 215, 0.14);
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .contact-box p {
+      margin: 0 0 18px;
+      opacity: 0.95;
+    }
+
+    .contact-list {
+      margin: 20px 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .contact-actions .btn-primary {
+      background: white;
+      color: #0b5ed7;
+    }
+
+    .contact-actions .btn-primary:hover {
+      background: #eef5ff;
+    }
+
+    .contact-actions .btn-secondary {
+      border-color: rgba(255,255,255,0.4);
+      color: white;
+      background: transparent;
+    }
+
+    .contact-actions .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 26px 20px 40px;
+      color: #64748b;
       font-size: 14px;
-      color: #777;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .about-grid,
+      .product-grid,
+      .strength-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>메디클</h1>
-  <p>의료기기 및 조영제 전문 유통</p>
-</header>
+  <header>
+    <div class="topbar">
+      <div class="logo">메디클</div>
+      <nav>
+        <a href="#about">회사소개</a>
+        <a href="#strength">사업영역</a>
+        <a href="#products">제품</a>
+        <a href="#contact">문의</a>
+      </nav>
+    </div>
+  </header>
 
-<nav>
-  <a href="#about">회사소개</a>
-  <a href="#products">제품</a>
-  <a href="#contact">문의</a>
-</nav>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>의료기기 및 조영제<br>전문 유통 파트너</h1>
+        <p>
+          메디클은 의료 현장에 필요한 다양한 제품을 안정적으로 공급하며,
+          신뢰할 수 있는 유통 파트너로서 병원과 의료기관의 업무를 지원합니다.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#products">제품 보기</a>
+          <a class="btn btn-secondary" href="#contact">문의하기</a>
+        </div>
+      </div>
 
-<section id="about">
-  <div class="card">
-    <h2>회사 소개</h2>
-    <p>
-      메디클은 의료기기 및 조영제를 전문으로 공급하는 유통 기업입니다.<br>
-      병원 및 의료기관에 안정적인 공급과 최적의 제품을 제공합니다.
+      <div class="hero-card">
+        <h3>메디클 소개</h3>
+        <ul>
+          <li>의료기기 및 조영제 전문 유통</li>
+          <li>병원 및 의료기관 대상 안정적 공급</li>
+          <li>제품 정보와 문의를 빠르게 확인 가능</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">회사 소개</h2>
+    <p class="section-desc">
+      메디클은 의료 현장에 필요한 제품을 안정적이고 신속하게 공급하는 전문 유통 기업입니다.
+      고객과의 신뢰를 바탕으로 정확한 공급과 체계적인 대응을 지향합니다.
     </p>
-  </div>
-</section>
 
-<section id="products">
-  <div class="card">
-    <h2>제품</h2>
-    <ul>
-      <li>CT 조영제</li>
-      <li>MRI 조영제</li>
-      <li>의료 소모품</li>
-    </ul>
-  </div>
-</section>
+    <div class="about-grid">
+      <div class="card">
+        <h3>신뢰</h3>
+        <p>정확한 제품 공급과 안정적인 대응을 바탕으로 고객 만족을 추구합니다.</p>
+      </div>
+      <div class="card">
+        <h3>전문성</h3>
+        <p>의료기기 및 조영제 분야의 이해를 바탕으로 적합한 제품 정보를 제공합니다.</p>
+      </div>
+      <div class="card">
+        <h3>지속성</h3>
+        <p>고객과 장기적인 파트너십을 만들기 위해 꾸준한 서비스 품질을 유지합니다.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-  <div class="card">
-    <h2>문의</h2>
-    <p>Email: medicle@mcle.co.kr</p>
-    <p>Tel: 02-0000-0000</p>
-  </div>
-</section>
+  <section id="strength">
+    <h2 class="section-title">사업 영역</h2>
+    <p class="section-desc">
+      다양한 의료기관의 수요에 맞춰 제품 공급과 안내를 지원합니다.
+    </p>
 
-<footer>
-  © 메디클 All Rights Reserved.
-</footer>
+    <div class="strength-grid">
+      <div class="card">
+        <h3>조영제</h3>
+        <p>CT 및 MRI 검사에 필요한 조영제 제품군을 안내하고 공급합니다.</p>
+      </div>
+      <div class="card">
+        <h3>의료 소모품</h3>
+        <p>현장에서 반복적으로 사용되는 다양한 의료 소모품을 제공합니다.</p>
+      </div>
+      <div class="card">
+        <h3>제품 안내</h3>
+        <p>필요한 제품 정보를 빠르게 확인하고 문의할 수 있도록 구성합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">제품</h2>
+    <p class="section-desc">
+      아래 내용은 예시다. 실제 판매 제품명으로 바꿔 넣으면 된다.
+    </p>
+
+    <div class="product-grid">
+      <div class="card product-card">
+        <div class="tag">CT 조영제</div>
+        <h3>제품명 예시 01</h3>
+        <p>제품 설명을 여기에 넣어라. 용도, 특징, 적용 분야를 짧게 적으면 된다.</p>
+      </div>
+
+      <div class="card product-card">
+        <div class="tag">MRI 조영제</div>
+        <h3>제품명 예시 02</h3>
+        <p>제품 설명을 여기에 넣어라. 병원 담당자가 봤을 때 바로 이해되게 쓰면 된다.</p>
+      </div>
+
+      <div class="card product-card">
+        <div class="tag">의료 소모품</div>
+        <h3>제품명 예시 03</h3>
+        <p>제품 설명을 여기에 넣어라. 규격이나 특징을 짧고 명확하게 적는 게 좋다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-box">
+      <h2>문의</h2>
+      <p>제품 및 공급 관련 문의는 아래 연락처로 부탁드립니다.</p>
+
+      <ul class="contact-list">
+        <li><strong>Email:</strong> medicle@mcle.co.kr</li>
+        <li><strong>Tel:</strong> 02-0000-0000</li>
+        <li><strong>Address:</strong> 회사 주소 입력</li>
+      </ul>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:medicle@mcle.co.kr">이메일 문의</a>
+        <a class="btn btn-secondary" href="tel:0200000000">전화 문의</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 메디클 All Rights Reserved.
+  </footer>
 
 </body>
 </html>
